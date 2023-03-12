@@ -1,50 +1,88 @@
 body {
-    box-sizing: border-box;
+    background-color: rgb(242, 245, 242);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
-    background-color:rgb(221, 210, 210);
+    color: rgb(119, 90, 9);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    max-width: 30%;
+    margin: 5% auto;
+    text-align: start;
+}
+
+h1 {
+    font-size: 2rem;
+    border-bottom: 0.2rem solid rgb(189, 186, 179)
 }
 
 h2 {
-font-size: 1em;
+    font-size: 1.5rem;
 }
-
- .meme-bayan {
-    margin: 5% 30%;
-} 
 
 .meme {
     display: block;
     cursor: pointer;
-    border-bottom: 0.2rem solid rgb(156, 147, 147);
-    margin-top: 1%;
+    transition: 1s ;
+    margin-top: -3%;
 }
 
-.meme-title {
+.meme-icon {
+margin-top: 3%;
+background: url(../cssBayan/Icons/checkmark.svg) no-repeat;
+width: 2rem;
+height: 2rem;
+display: none;
+}
+
+.meme-head {
     display: flex;
     justify-content: space-between;
 }
-
-.tetra {
-    margin-top: 5%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0.5em 0.3em 0 0.3em;
-    border-color: #000000 transparent transparent transparent;    
-}
-
- .meme-image {
-    display: none;
-} 
 
 .meme-input {
     appearance: none;
 }
 
-.meme-input:checked + .meme-image {
-   display: block; 
+.meme-image {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: none;
+}
+
+.meme-item {
+    border-bottom: 0.2rem solid rgb(189, 186, 179)
+}
+
+.meme-input:checked ~ .meme-image {
+    display: block;
+}
+.meme-input:checked ~ .meme-head .meme-icon {
+    background: url(../cssBayan/Icons/cross.svg) no-repeat;
+}
+
+section:hover .meme-title {
+    color: rgb(206, 154, 13);
+}
+
+.meme:hover .meme-image {
+    display: block;
+}
+
+section:hover .meme-icon {
+    display: block;
+}
+
+.meme:hover .meme-icon {
+   background: url(../cssBayan/Icons/cross.svg) no-repeat;
+   transition: 1s;
 } 
+
+
 
 
 
