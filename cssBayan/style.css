@@ -81,10 +81,13 @@ opacity: 0;
     color: rgb(206, 154, 13);
 }
 
-section:hover .meme-title {
-    color: rgb(206, 154, 13);
-    transition: 1s;
-}
+@media (hover: hover) {
+    section:hover .meme-title {
+        color: rgb(206, 154, 13);
+        transition: 1s;
+    }
+    
+  }
 
 .meme:hover .meme-image {
     transition: 2s;
@@ -134,6 +137,39 @@ section:hover .meme-icon {
         font-size: 2rem;
     }
 }
+
+@media (max-width:568px) {
+    .meme-icon {
+        margin-top: 3%;
+    }
+
+    h1 {
+        font-size: 2rem;
+        
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:320px) {
+    section {
+        max-width: 100%;  
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+
 
 
 
